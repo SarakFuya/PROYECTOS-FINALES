@@ -1,0 +1,12 @@
+.container{
+    background-color: rgb(181, 253, 255);
+    text-align: center;
+    display: flex;
+    width: auto;
+    height:max-content;
+}
+
+.botones{
+    width: 150px;
+    background-color: rgb(125, 228, 41);
+}

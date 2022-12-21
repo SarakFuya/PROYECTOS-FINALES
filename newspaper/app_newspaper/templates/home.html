@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="container">
+    {% if user.is_authenticated %}
+    <img src="{%  static 'img/saludo1.jpeg' %}" alt="" class="avatar2" >
+    <h2>Hola  {{ user.username }}! Como estas, tienes {{ user.age }} años.</h2>
+        <p><a href="{% url 'logout' %}"><button type="button" class="btn btn-danger">Log Out</button></a></p>
+    {% else %}
+    <img src="{%  static 'img/ingresar.jpeg' %}" alt="" class="avatar2" >
+        <h2>Quieres ingresar a esta pagina? </h2>
+        <a href="{% url 'login' %}"class="btn  me-2"><button type="button" class="btn btn-danger">Log In</button></a>
+        <a href="{% url 'signup' %}"class="btn  me-2"><button type="button" class="btn btn-danger">Sing Up</button></a>
+    {% endif %}
+</div>
+{% endblock content %}

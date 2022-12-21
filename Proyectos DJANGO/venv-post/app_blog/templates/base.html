@@ -1,0 +1,36 @@
+<!-- templates/base.html-->
+{% load static %}
+<html>
+    <head> 
+        <title>Django Blog</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
+    </head>
+
+    <body class="container">
+        <header>
+            {% if user.is_authenticated %}
+            <p>Hola {{ user.username }}!</p>
+
+                <p><a href="{% url 'logout' %}">Logout</a></p>
+            {% else %}
+                <p>Usuario no ha iniciado sesión.</p>
+                <button class="botones">
+                <a href="{% url 'login' %}">Login</a>
+            </button>
+            <button class="botones">
+                <a href="{% url 'signup' %}">Sign Up</a>
+            </button>
+            {% endif %}
+            <p><a> </a></p>
+            <h4><button class="botones"><a href="{% url 'home' %}">Django Blog</a></button></h4>
+            <p><a> </a></p>
+            <p><a> </a></p>
+            <img src="{% static 'img/fondo.png' %}" width="250px" height="250px">
+        </header>
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div> 
+        <script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.min.js' %}"></script>
+</html>

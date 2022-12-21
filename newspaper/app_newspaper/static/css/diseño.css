@@ -1,0 +1,36 @@
+.login{
+    margin: 70px;
+    
+}
+.card{
+    margin: 80px;
+    
+}
+.new{
+    margin: 60px;
+}
+.signup{
+    margin: 50px;
+}
+.inicio{
+    text-align: center;
+}
+body{
+    background-image: url('../img/blanco.jfif');
+    
+}.avatar2{
+    width: 400px;
+    height: 325px;
+}
+.avatar3{
+    width: 400px;
+    height: 325px;
+    justify-content: center;
+    align-items: center;
+}
+.avatar4{
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
